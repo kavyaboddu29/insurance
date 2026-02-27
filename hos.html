@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartClaim AI - Fraud Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🧠 SmartClaim AI</h1>
+    <p class="subtitle">Health Insurance Fraud Detection System</p>
+
+    <!-- CLAIM FORM -->
+    <div class="card">
+        <h2>📋 Claim Details</h2>
+
+        <label>Age</label>
+        <input type="number" id="age">
+
+        <label>Policy Duration (days)</label>
+        <input type="number" id="policy">
+
+        <label>Claim Amount (₹)</label>
+        <input type="number" id="amount">
+
+        <label>Previous Claims</label>
+        <input type="number" id="previous">
+
+        <label>Diagnosis Type</label>
+        <select id="diagnosis">
+            <option value="">-- Select Diagnosis --</option>
+            <option value="General Surgery">General Surgery</option>
+            <option value="Heart Surgery">Heart Surgery</option>
+            <option value="Orthopedic">Orthopedic</option>
+            <option value="Maternity">Maternity</option>
+        </select>
+
+        <label>Agent ID (Optional)</label>
+        <input type="text" id="agent">
+
+        <label>Admission Date</label>
+        <input type="date" id="admission">
+
+        <label>Discharge Date</label>
+        <input type="date" id="discharge">
+
+        <label>Select Hospital</label>
+        <select id="hospital">
+            <option value="">-- Select Hospital --</option>
+            <option value="City Care Hospital">City Care Hospital</option>
+            <option value="LifeLine Medical Center">LifeLine Medical Center</option>
+            <option value="Metro Health Hospital">Metro Health Hospital</option>
+            <option value="Prime Surgical Center">Prime Surgical Center</option>
+        </select>
+
+        <button onclick="calculateFraud()">🚨 Analyze Claim</button>
+
+        <div id="result" class="result-box"></div>
+    </div>
+
+    <!-- IMAGE CHECK -->
+    <div class="card">
+        <h2>🖼 Hospital Receipt Verification</h2>
+        <input type="file" id="imageUpload" accept="image/*">
+        <p id="imageResult"></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
